@@ -2,7 +2,7 @@ title: Peter Tessier
 description: >-
   Notes from a developer on code, AI-assisted coding, and whatever
   else I'm building. Unpolished on purpose.
-email: your-email@example.com   # TODO: update or delete this line
+email: peter@petertessier.com
 url: "https://blog.petertessier.com"
 baseurl: ""
 
@@ -10,8 +10,11 @@ theme: minima
 minima:
   skin: classic
   social_links:
-    - { platform: linkedin, user_url: "https://www.linkedin.com/in/YOUR-LINKEDIN" } # TODO
-    - { platform: github,   user_url: "https://github.com/YOUR-GITHUB" }           # TODO
+    - {
+        platform: linkedin,
+        user_url: "https://www.linkedin.com/in/petertessier",
+      }
+    - { platform: github, user_url: "https://github.com/thepetertessier" }
 
 plugins:
   - jekyll-feed
