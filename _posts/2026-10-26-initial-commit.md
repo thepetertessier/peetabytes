@@ -5,7 +5,7 @@ date: 2026-10-26
 categories: [ai, coding]
 ---
 
-Hi, I'm Peter 👋.
+Hello there!
 
 I'm a fresh software engineer who happened to enter the industry right as the sky started falling and everyone is running and screaming, metaphorically speaking.
 
