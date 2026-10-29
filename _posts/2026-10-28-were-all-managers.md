@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "We're all managers"
-date: 2026-10-27
+date: 2026-10-28
 categories: [ai, coding]
 ---
 
