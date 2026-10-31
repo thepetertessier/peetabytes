@@ -1,17 +1,17 @@
-# petertessier-blog
+# Peetabytes
 
 Peter Tessier's Jekyll-based blog.
 
-## Hosting locally
+## Previewing locally
 
-Requires Ruby + Bundler installed.
+Requires Ruby and Bundler. On Windows, WSL2 with Ubuntu is the recommended setup.
 
-```powershell
+```sh
 bundle install
-bundle exec jekyll serve --livereload
+bundle exec jekyll serve
 ```
 
-Then open `http://localhost:4000`.
+Open `http://127.0.0.1:4000`.
 
 ## Publishing a new post
 
@@ -19,11 +19,12 @@ Then open `http://localhost:4000`.
 2. Include front matter at the top:
    ```yaml
    ---
-   layout: post
    title: "Your Title Here"
    date: YYYY-MM-DD
-   categories: [tag1, tag2]
+   categories: [ai, coding]
+   tags: [lowercase-tag]
    ---
    ```
-3. Write in markdown below the `---`.
-4. Commit and push. Live in about a minute.
+   Use no more than two lowercase categories. Chirpy applies the post layout by default.
+3. Write in Markdown below the `---`.
+4. Push to `main` to deploy through GitHub Actions.

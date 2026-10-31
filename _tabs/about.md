@@ -1,6 +1,6 @@
 ---
-layout: home
-title: Home
+icon: fas fa-info-circle
+order: 4
 ---
 
 Hi there! I'm Peter, a young developer passionate about building great things.
@@ -35,13 +35,10 @@ This blog is my simple, messy compilation of thoughts, mostly about AI and codin
     color: #18181b;
     font: 14px/1.4 system-ui, sans-serif;
   }
-  .embeddable-buttondown-form label,
-  .embeddable-buttondown-form legend {
+  .embeddable-buttondown-form label {
     font-weight: 500;
   }
-  .embeddable-buttondown-form input[type="email"],
-  .embeddable-buttondown-form input[type="text"],
-  .embeddable-buttondown-form select {
+  .embeddable-buttondown-form input[type="email"] {
     box-sizing: border-box;
     width: 100%;
     padding: 6px 8px;
@@ -50,15 +47,6 @@ This blog is my simple, messy compilation of thoughts, mostly about AI and codin
     background: #fff;
     color: inherit;
     font: inherit;
-  }
-  .embeddable-buttondown-form fieldset {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-  .embeddable-buttondown-form fieldset label {
-    display: block;
-    font-weight: 400;
   }
   .embeddable-buttondown-form input[type="submit"] {
     padding: 8px 12px;
