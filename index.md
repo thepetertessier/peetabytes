@@ -3,4 +3,6 @@ layout: home
 title: Home
 ---
 
-Hi, I'm Peter 👋. Welcome to my simple, messy, human-generated blog.
+Hi there! I'm Peter, a young developer passionate about building great things.
+
+This blog is my simple, messy compilation of thoughts, mostly about AI and coding. Feel free to peruse and/or subscribe!
