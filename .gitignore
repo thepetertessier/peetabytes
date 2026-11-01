@@ -5,3 +5,22 @@ _site/
 vendor/
 .bundle/
 Gemfile.lock
+
+# NPM dependencies and generated assets
+node_modules
+package-lock.json
+assets/js/dist
+
+# IDE configurations
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# Miscellaneous system files
+*.gem
+_sass/vendors
+*~
+.DS_Store
+Thumbs.db
