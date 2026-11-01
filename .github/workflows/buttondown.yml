@@ -41,8 +41,8 @@ jobs:
           # Change to "send" once you trust it.
           BUTTONDOWN_MODE: draft
           SITE_URL: https://blog.petertessier.com
-          # Jekyll default permalink. If you switch to the Chirpy theme, use /posts/{slug}/
-          POST_URL_PATTERN: "/{year}/{month}/{day}/{slug}.html"
+          # Keep this in sync with the permalink configured in _config.yml.
+          POST_URL_PATTERN: "/{year}/{month}/{day}/{slug}/"
           ADD_READ_ON_WEB_LINK: "false"
           FILES: ${{ steps.posts.outputs.files }}
         run: python scripts/send_to_buttondown.py $FILES

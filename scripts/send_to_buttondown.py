@@ -11,8 +11,7 @@ Environment variables:
     SITE_URL                Default: https://blog.petertessier.com
     POST_URL_PATTERN        Where a post lives on the site. Placeholders:
                             {year} {month} {day} {slug}
-                            Default (Jekyll default): /{year}/{month}/{day}/{slug}.html
-                            Chirpy theme: /posts/{slug}/
+                            Default: /{year}/{month}/{day}/{slug}/
     ADD_READ_ON_WEB_LINK    "true" adds a "Read on the web" link at the top.
                             Default: false
 
@@ -36,7 +35,7 @@ USER_AGENT = "jekyll-buttondown-action"  # default python UA can get blocked
 
 SITE_URL = os.environ.get("SITE_URL", "https://blog.petertessier.com").rstrip("/")
 POST_URL_PATTERN = os.environ.get(
-    "POST_URL_PATTERN", "/{year}/{month}/{day}/{slug}.html"
+    "POST_URL_PATTERN", "/{year}/{month}/{day}/{slug}/"
 )
 MODE = os.environ.get("BUTTONDOWN_MODE", "draft").strip().lower()
 ADD_WEB_LINK = os.environ.get("ADD_READ_ON_WEB_LINK", "false").strip().lower() == "true"
