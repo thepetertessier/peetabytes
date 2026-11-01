@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Don't get left behind"
-date: 2026-11-1
+title: "This is a test"
+date: 2026-11-01
 categories: [ai, coding]
 ---
 
-### This is a test!
+### Testing, testing, 1-2-3
 
 What happens if I publish?
