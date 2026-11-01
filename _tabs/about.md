@@ -7,6 +7,8 @@ Hi there! I'm Peter, a young developer passionate about building great things.
 
 This blog is my simple, messy compilation of thoughts, mostly about AI and coding. Feel free to peruse and/or subscribe!
 
+<!-- Uncomment when buttondown is ready -->
+<!-- 
 <form
   action="https://buttondown.com/api/emails/embed-subscribe/petertessier"
   method="post"
@@ -66,4 +68,4 @@ This blog is my simple, messy compilation of thoughts, mostly about AI and codin
   .embeddable-buttondown-form p a {
     color: #71717a;
   }
-</style>
+</style> -->
