@@ -1,0 +1,48 @@
+name: Send new posts to Buttondown
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "_posts/**"
+
+jobs:
+  newsletter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      # Only posts ADDED in this push (not edited ones) get emailed.
+      - name: Find newly added posts
+        id: posts
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            BEFORE="HEAD~1"
+          fi
+          FILES=$(git diff --diff-filter=A --name-only "$BEFORE" HEAD -- '_posts/*.md' '_posts/*.markdown' | tr '\n' ' ')
+          echo "Added posts: ${FILES:-none}"
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+
+      - name: Create Buttondown emails
+        if: steps.posts.outputs.files != ''
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          # "draft" = creates a draft in Buttondown that you send by hand.
+          # Change to "send" once you trust it.
+          BUTTONDOWN_MODE: draft
+          SITE_URL: https://blog.petertessier.com
+          # Jekyll default permalink. If you switch to the Chirpy theme, use /posts/{slug}/
+          POST_URL_PATTERN: "/{year}/{month}/{day}/{slug}.html"
+          ADD_READ_ON_WEB_LINK: "false"
+          FILES: ${{ steps.posts.outputs.files }}
+        run: python scripts/send_to_buttondown.py $FILES
