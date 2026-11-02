@@ -4,7 +4,7 @@ Peter Tessier's Jekyll-based blog.
 
 ## Previewing locally
 
-Requires Ruby and Bundler. On Windows, WSL2 with Ubuntu is the recommended setup.
+Requires Ruby and Bundler.
 
 ```sh
 bundle install
@@ -12,6 +12,12 @@ bundle exec jekyll serve
 ```
 
 Open `http://127.0.0.1:4000`.
+
+To see drafts in `_drafts`:
+
+```sh
+bundle exec jekyll serve --drafts
+```
 
 ## Publishing a new post
 
