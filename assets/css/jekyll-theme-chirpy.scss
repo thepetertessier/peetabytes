@@ -1,0 +1,110 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* --- Home subscribe card --- */
+
+#subscribe {
+  margin-top: 2rem;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  background: var(--card-bg);
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+
+  .subscribe-title {
+    margin: 0 0 0.5rem;
+    color: var(--heading-color);
+    font-size: 1.25rem;
+  }
+
+  .subscribe-description {
+    max-width: 32rem;
+    margin: 0 auto 1.25rem;
+    color: var(--text-muted-color);
+    font-size: 0.95rem;
+  }
+
+  .subscribe-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    max-width: 28rem;
+    margin: 0 auto;
+
+    @media (min-width: 576px) {
+      grid-template-columns: 1fr auto;
+    }
+  }
+
+  .form-control {
+    min-width: 0;
+    color: var(--text-color);
+    background-color: var(--main-bg);
+    border: 1px solid var(--btn-border-color);
+    border-radius: 6px;
+
+    &::placeholder {
+      color: var(--text-muted-color);
+    }
+
+    &:focus {
+      color: var(--text-color);
+      background-color: var(--main-bg);
+      border-color: var(--input-focus-border-color);
+      box-shadow: none;
+    }
+  }
+
+  .subscribe-button {
+    padding: 0.5rem 1.25rem;
+    font: inherit;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    color: var(--main-bg);
+    background-color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--main-bg);
+      background-color: var(--text-color);
+      opacity: 0.85;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--link-color);
+      outline-offset: 2px;
+    }
+  }
+
+  .subscribe-note {
+    margin: 0.75rem 0 0;
+    color: var(--text-muted-color);
+    font-size: 0.78rem;
+  }
+}
+
+.home-intro {
+  margin-bottom: 0;
+}
