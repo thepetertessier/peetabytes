@@ -27,10 +27,9 @@ bundle exec jekyll serve --drafts
    ---
    title: "Your Title Here"
    date: YYYY-MM-DD
-   categories: [ai, coding]
    tags: [lowercase-tag]
    ---
    ```
-   Use no more than two lowercase categories. Chirpy applies the post layout by default.
+   Tags are flat and lowercase; use `ai-assisted-coding` for AI-coding posts. Chirpy applies the post layout by default.
 3. Write in Markdown below the `---`.
 4. Push to `main` to deploy through GitHub Actions.

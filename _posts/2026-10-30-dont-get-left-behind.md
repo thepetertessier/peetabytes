@@ -2,7 +2,7 @@
 layout: post
 title: "Don't get left behind"
 date: 2026-10-30
-categories: [ai, coding]
+tags: [ai-assisted-coding]
 ---
 
 ### I was a bit late to the AI coding game

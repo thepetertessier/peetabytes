@@ -2,7 +2,7 @@
 layout: post
 title: "We're all managers"
 date: 2026-10-27
-categories: [ai, coding]
+tags: [ai-assisted-coding]
 ---
 
 ### AI Coding is exhausting.

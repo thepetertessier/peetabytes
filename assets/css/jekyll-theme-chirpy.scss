@@ -108,3 +108,8 @@
 .home-intro {
   margin-bottom: 0;
 }
+
+/* Hide the non-clickable "Home" breadcrumb on the homepage only. */
+#breadcrumb > span:only-child {
+  display: none;
+}

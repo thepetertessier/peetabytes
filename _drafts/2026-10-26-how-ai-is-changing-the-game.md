@@ -2,7 +2,7 @@
 layout: post
 title: "Initial Commit"
 date: 2026-10-26
-categories: [ai, coding]
+tags: [ai-assisted-coding]
 ---
 
 Hi, I'm Peter 👋.

@@ -2,7 +2,6 @@
 layout: post
 title: "Initial Commit"
 date: 2026-10-26
-categories: [ai, coding]
 ---
 
 Hello there!

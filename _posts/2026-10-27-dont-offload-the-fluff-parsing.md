@@ -2,7 +2,7 @@
 layout: post
 title: "Don't offload the fluff-parsing"
 date: 2026-10-27
-categories: [ai, coding]
+tags: [ai-assisted-coding]
 ---
 
 ### Yesterday I was in the AI trenches.
