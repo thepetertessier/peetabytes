@@ -43,6 +43,6 @@ jobs:
           SITE_URL: https://blog.petertessier.com
           # Keep this in sync with the permalink configured in _config.yml.
           POST_URL_PATTERN: "/{year}/{month}/{day}/{slug}/"
-          ADD_READ_ON_WEB_LINK: "false"
+          ADD_READ_ON_WEB_LINK: "true"
           FILES: ${{ steps.posts.outputs.files }}
         run: python scripts/send_to_buttondown.py $FILES
