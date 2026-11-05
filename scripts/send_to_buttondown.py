@@ -100,7 +100,36 @@ def prepare_body(body):
             "check the email draft renders correctly.",
             file=sys.stderr,
         )
-    return body
+    return separate_lists(body)
+
+
+def separate_lists(body):
+    """Python-Markdown needs a blank line before a top-level list."""
+    lines = []
+    fence = None
+    previous_item = False
+    for line in body.split("\n"):
+        marker = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line)
+        if fence:
+            lines.append(line)
+            if (marker and marker[1][0] == fence[0]
+                    and len(marker[1]) >= len(fence) and not marker[2].strip()):
+                fence = None
+            previous_item = False
+            continue
+        if marker:
+            fence = marker[1]
+        # Require item text so rules and setext headings remain untouched.
+        item = bool(re.match(r"^(?:[-+*]|\d+\.)[ \t]+\S", line))
+        rule = bool(re.fullmatch(r"(?:\*[ \t]*){3,}|(?:-[ \t]*){3,}|(?:_[ \t]*){3,}", line))
+        item = item and not rule and not marker
+        if item and lines and lines[-1].strip() and not previous_item:
+            # Indented lines may be continuations or children of this list.
+            if not lines[-1].startswith((" ", "\t")):
+                lines.append("")
+        lines.append(line)
+        previous_item = item
+    return "\n".join(lines)
 
 
 def wait_until_live(url, timeout=900, interval=20):
